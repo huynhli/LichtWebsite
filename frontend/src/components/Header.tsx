@@ -3,30 +3,23 @@ export default function Header(){
 		window.scrollTo({ top: pixels, behavior: 'smooth'});
 	}
 
-	const openJobsPage = () => {
-		window.location.href='/Jobs'
-	}
-
 	return (
-		<div className={`flex flex-row w-full justify-between h-12 px-2`}>
+		<div className={`flex flex-row h-12 px-2 mt-[5%] bg-red-300 rounded-lg w-full md:w-auto md:mx-[10%]`}>
+				
+				<div className="hidden md:flex flex-1 justify-center items-center bg-green-400"><a onClick={() => scrollToSpot(700)} className={`inline-block mx-2 cursor-pointer font-bold text-[clamp(2rem,3vw,5rem)] transition-all duration-300 hover:scale-125 `}>About</a></div>
+				<div className="flex-1 flex items-center justify-between md:justify-center bg-green-200 md:flex-col">
+					<a
+						onClick={() => scrollToSpot(950)}
+						className="inline-block mx-2 cursor-pointer font-bold text-lg transition-all duration-300 hover:scale-125 max-w-[30%] md:max-w-[80%]"
+					>
+						<img src="/licht_logo.png" />
+					</a>
+					<a className="flex md:hidden ml-2 w-10 mr-[5%] bg-blue-400">
+						<img src="/hamburg.png" />
+					</a>
+				</div>
 
-			{/* UI Change button */}
-			<div className="flex w-30 justify-center">
-				<button className={`transition-all cursor-pointer font-medium duration-200 self-center px-2 py-1 bg-purple-600 rounded-lg active:bg-purple-900`}>Button</button>
+				<div className="hidden md:flex flex-1 justify-center items-center bg-green-400"><a onClick={() => scrollToSpot(950)} className={`inline-block mx-2 cursor-pointer font-bold text-[clamp(2rem,3vw,5rem)] transition-all duration-300 hover:scale-125`}>News</a></div>
 			</div>
-
-			{/* Middle */}
-			<div className="flex flex-row items-center text-white">
-				<div className="w-18 text-center"><a onClick={() => scrollToSpot(700)} className={`inline-block mx-2 cursor-pointer font-bold text-lg transition-all  duration-300 hover:scale-125 `}>Games</a></div>
-				<div className="w-18 text-center"><a onClick={() => scrollToSpot(950)} className={`inline-block mx-2 cursor-pointer font-bold text-lg transition-all duration-300 hover:scale-125 `}>Team</a></div>
-				<div className="w-18 text-center"><a onClick={openJobsPage} className={`inline-block mx-2 cursor-pointer font-bold text-lg transition-all duration-300 hover:scale-125`}>Jobs</a></div>
-			</div>
-
-			{/* Icons */}
-			<div className="flex justify-center w-30">
-				<a className="self-center cursor-pointer" href="mailto:tbspgames@gmail.com"><img src="" className={`h-9 object-contain transition-all duration-300 hover:scale-125 mr-2`} ></img>Hi</a>
-				<a className="self-center cursor-pointer" href="https://tbspgames.itch.io/"><img src="" className={`h-6 object-contain transition-all duration-300 hover:scale-125 `} ></img>Hi</a>
-			</div>
-		</div>
 	)
 }

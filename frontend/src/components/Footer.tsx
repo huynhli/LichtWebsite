@@ -1,8 +1,7 @@
-export default function Footer(){
-
-	return (
-		<div className="flex w-full justify-center bg-purple-950 py-2">
-			<p className="text-xs">Copyright 2025 tbsp games</p>
-		</div>
-	)
+export default function Footer() {
+  return (
+    <footer className="w-full h-16 flex justify-center items-center bg-purple-950">
+      <p className="text-xs text-white">Copyright 2025 tbsp games</p>
+    </footer>
+  )
 }
