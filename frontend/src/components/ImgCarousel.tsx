@@ -54,13 +54,13 @@ export default function ImgCarousel() {
                 
                 {/* Your overlapping elements */}
                 <motion.div style={{x: xLeft}} className={`absolute justify-center items-center top-[0.5vw] left-[30%] h-[18vw] w-[13vw] transition-opacity ${
-                    currentIndex === 0 ? 'opacity-100 transform scale-125 transition ease-out duration-600 ' : 'opacity-20'
+                    currentIndex === 0 ? 'opacity-100 transform scale-125 transition ease-out duration-600 z-10' : 'opacity-20 z-0'
                 }`}><img src='jannah_player_initial_sketch_1_(2).jpg'/></motion.div>
                 <motion.div style={{x: xCenter}} className={`absolute top-[0.5vw] left-[39%] h-[18vw] w-[13vw] transition-opacity ${
-                    currentIndex === 1 ? 'opacity-100 transform scale-125 transition ease-out duration-600 ' : 'opacity-20'
+                    currentIndex === 1 ? 'opacity-100 transform scale-125 transition ease-out duration-600 z-10' : 'opacity-20 z-0'
                 }`}><img src='jannah_player_initial_sketch_2_(2).jpg'/></motion.div>
                 <motion.div style={{x: xRight}} className={`absolute top-[0.5vw] right-[30%] h-[18vw] w-[13vw] transition-opacity ${
-                    currentIndex === 2 ? 'opacity-100 transform scale-125 transition ease-out duration-600 ' : 'opacity-20'
+                    currentIndex === 2 ? 'opacity-100 transform scale-125 transition ease-out duration-600 z-10' : 'opacity-20 z-0'
                 }`}><img src='jannah_player_initial_sketch_3_(2).jpg'/></motion.div>
             </div>
             {/* Navigation Buttons */}
@@ -68,18 +68,18 @@ export default function ImgCarousel() {
                 <button 
                     onClick={goToPrevious}
                     
-                    className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                    className="px-4 py-2 bg-blue-500 text-white text-3xl rounded hover:bg-blue-600"
                 >
                     {"<"}
                 </button>
                 
                 {/* Dots indicator */}
-                <div className="flex space-x-2 mx-3">
+                <div className="flex space-x-2 mx-8">
                     {images.map((_, index) => (
                         <button
                             key={index}
                             onClick={() => setCurrentIndex(index)}
-                            className={`w-3 h-3 rounded-full transition-all duration-300 ease-in-out ${
+                            className={`w-8 h-8 rounded-full transition-all duration-300 ease-in-out ${
                                 index === currentIndex ? 'bg-blue-500' : 'bg-gray-300'
                             }`}
                             onMouseEnter={() => setCurrentIndex(index)}
@@ -90,7 +90,7 @@ export default function ImgCarousel() {
                 
                 <button 
                     onClick={goToNext}
-                    className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                    className="px-4 py-2 bg-blue-500 text-white text-3xl rounded hover:bg-blue-600"
                 >
                     {">"}
                 </button>
