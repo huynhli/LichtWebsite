@@ -29,7 +29,7 @@ export default function Header({ onScrollToAbout, onScrollToNews }: HeaderProps)
 	}
 
 	return (
-		<div className={`flex flex-row h-12 px-2 mt-[5%] bg-red-300 rounded-lg w-full md:w-auto md:mx-[10%]`}>
+		<div className={`flex flex-row h-12 px-2 mt-[7%] bg-red-300 rounded-lg w-full md:w-auto md:mx-[10%]`}>
 				
 				<div className="hidden md:flex flex-1 justify-center items-center bg-green-400"><a onClick={onScrollToAbout} className={`inline-block mx-2 cursor-pointer font-bold text-[clamp(2rem,3vw,5rem)] transition-all duration-300 hover:scale-125 `}>About</a></div>
 				<div className="flex-1 flex items-center justify-between md:justify-center bg-green-200 md:flex-col">
